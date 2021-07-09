@@ -1,3 +1,4 @@
+# python-challenge
 #The total number of months included in the dataset
 #The net total amount of "Profit/Losses" over the entire period
 #The average of the changes in "Profit/Losses" over the entire period
@@ -39,6 +40,7 @@ with open(csvpath) as csvfile:
     for x in range(1, len(Profits_Loss)):
         Monthly_Change.append(int(Profits_Loss[x]) - int(Profits_Loss[x-1]))
 
+#Calculations 
 max_increase_profit = max(Monthly_Change)
 max_decrease_profit = min(Monthly_Change)
 
@@ -58,7 +60,7 @@ print (f'Greatest Increase in Profits: {Date[max_decrease_month]} (${(str(max_de
 analysis = os.path.join
 
 #Export to Text File
-with open ('election_data.txt','w') as text: 
+with open ('financial_analysis_data.txt','w') as text: 
     text.write ('Financial Analysis')
     text.write ('-------------------')
     text.write (f'Total Months: {len(Date)}')

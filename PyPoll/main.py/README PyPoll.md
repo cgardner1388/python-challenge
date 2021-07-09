@@ -1,3 +1,4 @@
+# python-challenge
 #Homework 2 PyPoll
  #The total number of votes cast
 #A complete list of candidates who received votes
@@ -60,6 +61,13 @@ with open(csvpath) as csvfile:
     #specify the dictionary
         else:
             candidate_dict[candidate] = 1 + candidate_dict[candidate]
+
+#Calculations
+max_increase_profit = max(Monthly_Change)
+max_decrease_profit = min(Monthly_Change)
+
+max_increase_month = Monthly_Change.index(max(Monthly_Change)) + 1
+max_decrease_month = Monthly_Change.index(min(Monthly_Change)) + 1 
 
     #print statements
 
